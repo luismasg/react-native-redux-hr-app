@@ -8,7 +8,7 @@ class LoginForm extends Component {
     componentDidMount() {
            this.props.loginUser({ email: 'luis@gmail.com', password: '123456' });
             /*delete this to test loginForm, im skipping it*/
-            console.log('auto login, loginForm doesnt work');
+            console.log('auto login in loginForm.js ');
     }
 
     onEmailChange = (text) => this.props.emailChange(text);
