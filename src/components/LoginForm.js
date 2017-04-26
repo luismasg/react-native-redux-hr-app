@@ -6,9 +6,9 @@ import * as actions from '../actions';
 
 class LoginForm extends Component {
     componentDidMount() {
-            this.props.loginUser({ email: 'luis@gmail.com', password: '123456' });
+           this.props.loginUser({ email: 'luis@gmail.com', password: '123456' });
             /*delete this to test loginForm, im skipping it*/
-            console.log('auto login, loginForm');
+            console.log('auto login, loginForm doesnt work');
     }
 
     onEmailChange = (text) => this.props.emailChange(text);

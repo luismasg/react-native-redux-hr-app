@@ -29,10 +29,10 @@ export const loginUser = ({ email, password }) => {
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then(user => { loginUserSuccess(dispatch, user); })
         .catch((error) => {
-            console.log('firebase error############################################## : ', error);
+            console.log(error);
             firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(user => loginUserSuccess(dispatch, user))
-            .catch(() => loginUserFail(dispatch));
+            .catch((error2) => { console.log(error2); loginUserFail(dispatch); });
         });
     };
 };
